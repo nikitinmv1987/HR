@@ -16,14 +16,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>file.txt</name>
-			<type>1</type>
-			<location>C:/GIT/HR.GIT/HumanResources/Er.log</location>
-		</link>
-		<link>
 			<name>settings.ini</name>
 			<type>1</type>
-			<location>C:/GIT/HR.GIT/HumanResources/settings.ini</location>
+			<location>D:/GIT/HR.GIT/HumanResources/settings.ini</location>
 		</link>
 	</linkedResources>
 </projectDescription>
