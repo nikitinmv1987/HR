@@ -18,7 +18,7 @@
 		<link>
 			<name>settings.ini</name>
 			<type>1</type>
-			<location>D:/GIT/HR.GIT/HumanResources/settings.ini</location>
+			<locationURI>PROJECT_LOC/settings.ini</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
