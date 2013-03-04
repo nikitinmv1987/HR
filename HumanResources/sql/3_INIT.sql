@@ -1,48 +1,48 @@
-/* -------------------------------- */
+ALTER SESSION SET NLS_LANGUAGE='RUSSIAN'
 /*           SYSTEM INIT            */
 /* -------------------------------- */
 
-INSERT INTO TITLE (ID, NAME, CAPTION, USER_NAME, USER_DATE) VALUES (1, 'staff',    'С€С‚Р°С‚РЅС‹Р№ СЃРѕС‚СЂСѓРґРЅРёРє', USER, SYSDATE);
-INSERT INTO TITLE (ID, NAME, CAPTION, USER_NAME, USER_DATE) VALUES (2, 'manager',  'РјРµРЅРµРґР¶РµСЂ',          USER, SYSDATE);
-INSERT INTO TITLE (ID, NAME, CAPTION, USER_NAME, USER_DATE) VALUES (3, 'director', 'РґРёСЂРµРєС‚РѕСЂ',          USER, SYSDATE);
-INSERT INTO TITLE (ID, NAME, CAPTION, USER_NAME, USER_DATE) VALUES (4, 'president','РїСЂРµР·РёРґРµРЅС‚',         USER, SYSDATE);
+INSERT INTO TITLE (ID, NAME, CAPTION, USER_NAME, USER_DATE) VALUES (1, 'staff',    'штатный сотрудник', USER, SYSDATE);
+INSERT INTO TITLE (ID, NAME, CAPTION, USER_NAME, USER_DATE) VALUES (2, 'manager',  'менеджер',          USER, SYSDATE);
+INSERT INTO TITLE (ID, NAME, CAPTION, USER_NAME, USER_DATE) VALUES (3, 'director', 'директор',          USER, SYSDATE);
+INSERT INTO TITLE (ID, NAME, CAPTION, USER_NAME, USER_DATE) VALUES (4, 'president','президент',         USER, SYSDATE);
 
 /* -------------------------------- */
 /*           TEST INIT              */
 /* -------------------------------- */
 
-INSERT INTO OFFICE (ID, NAME, ADRESS) VALUES (1, 'Р“Р»Р°РІРЅС‹Р№ РѕС„РёСЃ',   'СѓР». Р’Р°СЃРёР»СЊРєРѕРІСЃРєР°СЏ, 16, РљРёРµРІ, 01330');
-INSERT INTO OFFICE (ID, NAME, ADRESS) VALUES (2, 'Р”Р°СЂРЅРёС†РєРёР№ РѕС„РёСЃ', 'СѓР». Р—РґРѕР»Р±СѓРЅРѕРІСЃРєР°СЏ, 9, РљРёРµРІ, 02030');
-INSERT INTO OFFICE (ID, NAME, ADRESS) VALUES (3, 'РЎРєР»Р°Рґ',          'СѓР». РџРµС‚СЂРѕРїР°Р»РѕРІСЃРєР°СЏ, 23, РљРёРµРІ, 03240');
+INSERT INTO OFFICE (ID, NAME, ADRESS) VALUES (1,  'Главный офис',  'ул. Васильковская, 16, Киев, 01330');
+INSERT INTO OFFICE (ID, NAME, ADRESS) VALUES (2, 'Дарницкий офис', 'ул. Здолбуновская, 9, Киев, 02030');
+INSERT INTO OFFICE (ID, NAME, ADRESS) VALUES (3, 'Склад',          'ул. Петропаловская, 23, Киев, 03240');
 
-INSERT INTO DEPARTMENT (ID, NAME) VALUES (1, 'РџСЂРѕРіСЂР°РјРЅС‹С… СЂРµС€РµРЅРёР№');
-INSERT INTO DEPARTMENT (ID, NAME) VALUES (2, 'РЎРµСЂРІРµСЂРЅС‹С… СЂРµС€РµРЅРёР№');
-INSERT INTO DEPARTMENT (ID, NAME) VALUES (3, 'Р‘СѓС…РіР°Р»С‚РµСЂРёСЏ');
-INSERT INTO DEPARTMENT (ID, NAME) VALUES (4, 'РћС‚РґРµР» РєР°РґСЂРѕРІ');
+INSERT INTO DEPARTMENT (ID, NAME) VALUES (1, 'Програмных решений');
+INSERT INTO DEPARTMENT (ID, NAME) VALUES (2, 'Серверных решений');
+INSERT INTO DEPARTMENT (ID, NAME) VALUES (3, 'Бухгалтерия');
+INSERT INTO DEPARTMENT (ID, NAME) VALUES (4, 'Отдел кадров');
 
-INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (1, 1, 'РЎС‚Р°С‚РёСЃС‚РёРєРё');
-INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (2, 1, 'РђРЅР°Р»РёР·Р°');
+INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (1, 1, 'Статистики');
+INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (2, 1, 'Анализа');
 INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (3, 1, 'WEB');
-INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (4, 2, 'РџРѕРґРґРµСЂР¶РєРё');
-INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (5, 2, 'РЎРІСЏР·Рё');
-INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (6, 4, 'РџРѕРґР±РѕСЂР° РїРµСЂСЃРѕРЅР°Р»Р°');
-INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (7, 4, 'РћР±СЃР»СѓР¶РёРІР°РЅРёСЏ РїРµСЂСЃРѕРЅР°Р»Р°');
+INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (4, 2, 'Поддержки');
+INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (5, 2, 'Связи');
+INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (6, 4, 'Подбора персонала');
+INSERT INTO DEPGROUP (ID, ID_DEP, NAME) VALUES (7, 4, 'Обслуживания персонала');
 
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (1,  'Р‘РµР»СЊРєРµРІРёС‡',  'РџРµС‚СЂ',      'РџРµС‚СЂРѕРІРёС‡',     'СѓР». РЁРєРІС‡РµРЅРєРѕ, 14, РљРёРµРІ, 02240',           '673-23-70');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (2,  'РљРёСЂРѕРІ',      'Р’Р°СЃРёР»РёР№',   'Р’Р°СЃРёР»СЊРµРІРёС‡',   'СѓР». РЁРµСЂР±Р°РєРѕРІР°, 24, РљРёРµРІ, 03240',          '623-63-23');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (3,  'РљРёСЂРёР»РѕРІ',    'РђР»РµРєСЃР°РЅРґСЂ', 'РњРёС…Р°Р№Р»РѕРІРёС‡',   'Р±СѓР». Р›РµСЃРё Р›РєСЂР°РёРЅРєРё, 34, РљРёРµРІ, 02640',     '634-33-20');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (4,  'РЁРµРІС‡РµРЅРєРѕ',   'РњР°РєСЃРёРј',    'РђР»РµРєСЃРµРµР№РІРёС‡',  'СѓР». Р›РёР±РµРґСЃРєР°СЏ, 8, РљРёРµРІ, 02540',           '643-43-23');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (5,  'РЁРІРµС†РѕРІ',     'РРІР°РЅ',      'РџРµС‚СЂРѕРІРёС‡',     'СѓР». Р“СЂРёРіРѕСЂРµРЅРєР°, 6, РљРёРµРІ, 05240',          '657-53-71');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (6,  'РћСЂР»РѕРІ',      'Р®СЂРёР№',      'Р’Р»Р°РґРёРјРёСЂРѕРІРёС‡', 'СѓР». Р›СЊРІР° С‚РѕР»СЃС‚РѕРіРѕ, 44, РљРёРµРІ, 02240',      '663-63-23');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (7,  'Р“СѓСЃРµРІ',      'РРІР°РЅ',      'РЎРµСЂРіРµРµРІРёС‡',    'СѓР». РЎС‚СЂРѕРёС‚РµР»РµР№, 4, РљРёРµРІ, 02240',          '777-27-22');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (8,  'Р”СѓСЂРЅРѕРІ',     'РРІР°РЅ',      'РђРЅРґСЂРµРµРІРёС‡',    'СѓР». РњР°С€РёРЅРѕСЃС‚СЂРѕРёС‚РµР»СЊРЅР°СЏ, 74, РљРёРµРІ, 02240', '873-28-73');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (9,  'РРІР°РЅРѕРІ',     'Р•РІРіРµРЅРёР№',   'РРІР°РЅРѕРІРёС‡',     'СѓР». Р Р°РґСѓРЅСЃРєР°СЏ, 74, РљРёРµРІ, 02240',          '977-43-23');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (10, 'РЁРѕРІРєРѕРІСЃРєРёР№', 'РџР°РІРµР»',     'РРІР°РЅРѕРІРёС‡',     'СѓР». РЎР°Р±СѓСЂРѕРІР°, 73, РљРёРµРІ, 02240',           '573-53-73');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (11, 'Р”СѓСЂРѕРІ',      'РРІР°РЅ',      'Р®СЂСЊРµРІРёС‡',      'СѓР». РљРёРєРІРёРґР·Рµ, 52, РљРёРµРІ, 02240',           '373-73-23');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (12, 'РРІР°РЅРѕРІ',     'РђР»РµРєСЃРµР№',   'РђР»РµРєСЃРµРµРІРёС‡',   'СѓР». РҐР°СЂСЊРєРѕРІСЃРєР°СЏ, 74, РљРёРµРІ, 02240',        '477-83-26');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (13, 'РќРёРєС‚РёРЅ',     'РРІР°РЅ',      'РРІР°РЅРѕРІРёС‡',     'СѓР». РћРґРµСЃСЃРєР°СЏ, 46, РљРёРµРІ, 02240',           '573-23-83');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (14, 'РљР°Р»Р°РґР·Рµ',    'РЎРµСЂРіРµР№',    'Р’Р°СЃРёР»СЊРµРІРёС‡',   'СѓР». РќРёРєРѕР»Р°РµСЃРІСЃРєР°СЏ, 34, РљРёРµРІ, 02240',      '373-23-24');
-INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (15, 'Р РµР±СЂРѕРІ',     'Р’Р°СЃРёР»РёР№',   'РРІР°РЅРѕРІРёС‡',     'СѓР». РљР°РєР°РµС‚Рѕ, 34, РљРёРµРІ, 02240',            '673-23-23');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (1,  'Белькевич',  'Петр',      'Петрович',     'ул. Шквченко, 14, Киев, 02240',           '673-23-70');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (2,  'Киров',      'Василий',   'Васильевич',   'ул. Шербакова, 24, Киев, 03240',          '623-63-23');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (3,  'Кирилов',    'Александр', 'Михайлович',   'бул. Леси Лкраинки, 34, Киев, 02640',     '634-33-20');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (4,  'Шевченко',   'Максим',    'Алексеейвич',  'ул. Либедская, 8, Киев, 02540',           '643-43-23');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (5,  'Швецов',     'Иван',      'Петрович',     'ул. Григоренка, 6, Киев, 05240',          '657-53-71');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (6,  'Орлов',      'Юрий',      'Владимирович', 'ул. Льва толстого, 44, Киев, 02240',      '663-63-23');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (7,  'Гусев',      'Иван',      'Сергеевич',    'ул. Строителей, 4, Киев, 02240',          '777-27-22');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (8,  'Дурнов',     'Иван',      'Андреевич',    'ул. Машиностроительная, 74, Киев, 02240', '873-28-73');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (9,  'Иванов',     'Евгений',   'Иванович',     'ул. Радунская, 74, Киев, 02240',          '977-43-23');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (10, 'Шовковский', 'Павел',     'Иванович',     'ул. Сабурова, 73, Киев, 02240',           '573-53-73');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (11, 'Дуров',      'Иван',      'Юрьевич',      'ул. Киквидзе, 52, Киев, 02240',           '373-73-23');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (12, 'Иванов',     'Алексей',   'Алексеевич',   'ул. Харьковская, 74, Киев, 02240',        '477-83-26');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (13, 'Никтин',     'Иван',      'Иванович',     'ул. Одесская, 46, Киев, 02240',           '573-23-83');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (14, 'Каладзе',    'Сергей',    'Васильевич',   'ул. Николаесвская, 34, Киев, 02240',      '373-23-24');
+INSERT INTO EMPLOYEE (ID, FIRST_NAME, MIDDLE_NAME, SECOND_NAME, ADRESS, PHONE) VALUES (15, 'Ребров',     'Василий',   'Иванович',     'ул. Какаето, 34, Киев, 02240',            '673-23-23');
 
 INSERT INTO POSITION (ID, ID_OFFICE, ID_CHIEF, ID_TITLE, ID_EMPLOYEE, PHONE) VALUES (1,  1, NULL,  4,  1, '23-45');
 INSERT INTO POSITION (ID, ID_OFFICE, ID_CHIEF, ID_TITLE, ID_EMPLOYEE, PHONE) VALUES (2,  1,    1,  3,  2, '43-54');
