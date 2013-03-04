@@ -162,3 +162,5 @@ pip-log.txt
 # Mac crap
 .DS_Store
 /HumanResources/settings.ini
+
+/HumanResources/run/EXEC.cmd
