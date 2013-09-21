@@ -1,0 +1,4 @@
+C:\app\Nikitinmaksi\product\11.2.0\client_3\BIN\SQLPLUS SYSTEM@XE/lalala @D:\GIT\HR.GIT\HumanResources\sql\0_CREATE_WORK_USER.sql
+C:\app\Nikitinmaksi\product\11.2.0\client_3\BIN\SQLPLUS MAX_TEST1@XE/MAX_TEST1 @D:\GIT\HR.GIT\HumanResources\sql\1_DDL.sql
+C:\app\Nikitinmaksi\product\11.2.0\client_3\BIN\SQLPLUS MAX_TEST1@XE/MAX_TEST1 @D:\GIT\HR.GIT\HumanResources\sql\2_VIEWS.sql
+C:\app\Nikitinmaksi\product\11.2.0\client_3\BIN\SQLPLUS MAX_TEST1@XE/MAX_TEST1 @D:\GIT\HR.GIT\HumanResources\sql\3_INIT.sql

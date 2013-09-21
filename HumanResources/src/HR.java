@@ -91,8 +91,7 @@ public class HR {
 			int k = 0;
 			if (numRows > 0)
 			do {
-				Object[] rowData = new Object[rs.getMetaData()
-						.getColumnCount()];
+				Object[] rowData = new Object[rs.getMetaData().getColumnCount()];
 				for (int i = 0; i < rowData.length; ++i) {
 					rowData[i] = rs.getObject(i + 1);
 				}
