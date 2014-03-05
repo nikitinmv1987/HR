@@ -65,8 +65,7 @@ public class HR {
 
 		comboBox.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent arg0) {
-				DoOnChange(comboBox, textPane, scrollPane);
-				
+				DoOnChange(comboBox, textPane, scrollPane);				
 			}
 		});
 	}

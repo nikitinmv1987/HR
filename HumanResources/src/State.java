@@ -10,7 +10,7 @@ public class State {
 
 	public static Statement getInstance() {
 		if (instance == null) {
-			Locale.setDefault(Locale.CHINA);
+			Locale.setDefault(Locale.ENGLISH);
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver").newInstance();
 				
